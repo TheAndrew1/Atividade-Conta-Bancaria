@@ -40,8 +40,8 @@ public class Conta {
 
     public void saldos(){
         System.out.println("");
-        System.out.println("Saldo conta corrente: R$" + this.getSaldoContaCorrente());
-        System.out.println("Saldo conta investimento: R$" + this.getSaldoInvestimento());
+        System.out.println("Saldo conta corrente: R$" + String.format("%.2f" , this.getSaldoContaCorrente()));
+        System.out.println("Saldo conta investimento: R$" + String.format("%.2f" , this.getSaldoInvestimento()));
         System.out.println("");
         try {
             Thread.sleep (2000);
@@ -60,7 +60,7 @@ public class Conta {
         }
 
         this.saldoContaCorrente += deposito;
-        System.out.println("Valor de R$" + deposito + " depositado com sucesso!");
+        System.out.println("Valor de R$" + String.format("%.2f" , deposito) + " depositado com sucesso!");
         try {
             Thread.sleep (2000);
         } catch (InterruptedException e) {
@@ -88,7 +88,7 @@ public class Conta {
         this.saldoInvestimento -= resgate;
         this.saldoContaCorrente += resgate;
 
-        System.out.println("Valor de R$" + resgate + " resgatado com sucesso!");
+        System.out.println("Valor de R$" + String.format("%.2f" , resgate) + " resgatado com sucesso!");
         try {
             Thread.sleep (2000);
         } catch (InterruptedException e) {
@@ -116,7 +116,7 @@ public class Conta {
         this.saldoInvestimento += investimento;
         this.saldoContaCorrente -= investimento;
 
-        System.out.println("Valor de R$" + investimento + " investido com sucesso!");
+        System.out.println("Valor de R$" + String.format("%.2f" , investimento) + " investido com sucesso!");
         try {
             Thread.sleep (2000);
         } catch (InterruptedException e) {

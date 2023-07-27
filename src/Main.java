@@ -27,17 +27,17 @@ public class Main {
                     conta.saldos();
                 }
                 case 2 -> {
-                    System.out.println("Digite um valor para resgatar(seu saldo atual é:"+conta.getSaldoInvestimento()+")");
+                    System.out.println("Digite um valor para resgatar(seu saldo atual é:" + String.format("%.2f" , conta.getSaldoContaCorrente()) + ")");
                     valor = scanf.nextDouble();
                     conta.resgate(valor);
                 }
                 case 3 -> {
-                    System.out.println("Digite um valor para depositar(seu saldo atual é:"+conta.getSaldoContaCorrente()+")");
+                    System.out.println("Digite um valor para depositar(seu saldo atual é:" + String.format("%.2f" , conta.getSaldoContaCorrente()) + ")");
                     valor = scanf.nextDouble();
                     conta.deposito(valor);
                 }
                 case 4 -> {
-                    System.out.println("Digite um valor para investir(seu saldo atual é:"+conta.getSaldoContaCorrente()+")");
+                    System.out.println("Digite um valor para investir(seu saldo atual é:" + String.format("%.2f" , conta.getSaldoContaCorrente()) + ")");
                     valor = scanf.nextDouble();
                     conta.investimento(valor);
                 }

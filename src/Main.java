@@ -6,7 +6,7 @@ public class Main {
         int numero;
 
         System.out.println("|Banco Biederman|");
-        System.out.println("Bem vindo" +conta.getNomeCompleto());
+        System.out.println("Bem vindo" + conta.getNomeCompleto());
         System.out.println("Digite um numero:");
         numero = scanf.nextInt();
         System.out.println("1- Visualizar saldos");

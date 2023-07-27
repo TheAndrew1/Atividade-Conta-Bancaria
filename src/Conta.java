@@ -4,9 +4,15 @@ public class Conta {
 
     private String nomeCompleto;
 
-    private BigDecimal saldoContaCorrente;
+    private double saldoContaCorrente;
 
-    private BigDecimal saldoInvestimento;
+    private double saldoInvestimento;
+
+    public Conta(String nome){
+        this.nomeCompleto = nome;
+        this.saldoContaCorrente = 100.0;
+        this.saldoInvestimento = 0.0;
+    }
 
     public String getNomeCompleto() {
         return nomeCompleto;
@@ -16,25 +22,34 @@ public class Conta {
         this.nomeCompleto = nomeCompleto;
     }
 
-    public BigDecimal getSaldoContaCorrente() {
+    public double getSaldoContaCorrente() {
         return saldoContaCorrente;
     }
 
-    public void setSaldoContaCorrente(BigDecimal saldoContaCorrente) {
+    public void setSaldoContaCorrente(double saldoContaCorrente) {
         this.saldoContaCorrente = saldoContaCorrente;
     }
 
-    public BigDecimal getSaldoInvestimento() {
+    public double getSaldoInvestimento() {
         return saldoInvestimento;
     }
 
-    public void setSaldoInvestimento(BigDecimal saldoInvestimento) {
+    public void setSaldoInvestimento(double saldoInvestimento) {
         this.saldoInvestimento = saldoInvestimento;
     }
 
-    public Conta(String nome){
-        this.nomeCompleto = nome;
-        this.saldoContaCorrente = new BigDecimal("100.0");
-        this.saldoInvestimento = new BigDecimal("0.0");
+    public void deposito(double deposito){
+        this.saldoContaCorrente += deposito;
     }
+
+    public void resgate(double resgate){
+        this.saldoInvestimento -= resgate;
+        this.saldoContaCorrente += resgate;
+    }
+
+    public void investimento(double investimento){
+        this.saldoInvestimento += investimento;
+        this.saldoContaCorrente -= investimento;
+    }
+
 }

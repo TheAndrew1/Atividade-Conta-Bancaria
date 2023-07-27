@@ -23,13 +23,19 @@ public class Main {
                     conta.saldos();
                 }
                 case 2 -> {
-                    conta.resgate(50.0);
+                    System.out.println("Digite um valor para resgatar(seu saldo atual é:"+conta.getSaldoInvestimento()+")");
+                    valor = scanf.nextDouble();
+                    conta.resgate(valor);
                 }
                 case 3 -> {
-                    conta.deposito(50.0);
+                    System.out.println("Digite um valor para depositar(seu saldo atual é:"+conta.getSaldoContaCorrente()+")");
+                    valor = scanf.nextDouble();
+                    conta.deposito(valor);
                 }
                 case 4 -> {
-                    conta.investimento(50.0);
+                    System.out.println("Digite um valor para investir(seu saldo atual é:"+conta.getSaldoContaCorrente()+")");
+                    valor = scanf.nextDouble();
+                    conta.investimento(valor);
                 }
                 case 5 -> {
                     System.out.println("Saindo...");

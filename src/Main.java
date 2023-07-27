@@ -19,12 +19,22 @@ public class Main {
             opcao = scanf.nextInt();
 
             switch (opcao) {
-                case 1 -> System.out.println("1- Visualizar saldos");
-                case 2 -> System.out.println("2- Resgatar");
-                case 3 -> System.out.println("3- Depositar");
-                case 4 -> System.out.println("4- Investir");
-                case 5 -> System.out.println("4- Fechar");
-                default -> System.out.println("numero invalido");
+                case 1 -> {
+                    conta.saldos();
+                }
+                case 2 -> {
+                    conta.resgate(50.0);
+                }
+                case 3 -> {
+                    conta.deposito(50.0);
+                }
+                case 4 -> {
+                    conta.investimento(50.0);
+                }
+                case 5 -> {
+                    System.out.println("Saindo...");
+                }
+                default -> System.out.println("Número inválido");
             }
 
             System.out.println("");

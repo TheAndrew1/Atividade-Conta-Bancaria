@@ -43,21 +43,41 @@ public class Conta {
         System.out.println("Saldo conta corrente: R$" + this.getSaldoContaCorrente());
         System.out.println("Saldo conta investimento: R$" + this.getSaldoInvestimento());
         System.out.println("");
+        try {
+            Thread.sleep (2000);
+        } catch (InterruptedException ex) {
+        }
     }
 
     public void deposito(double deposito){
         this.saldoContaCorrente += deposito;
-        System.out.println("Valor R$" + deposito + "depositado com sucesso");
+        System.out.println("Valor de R$" + deposito + " depositado com sucesso!");
+        try {
+            Thread.sleep (2000);
+        } catch (InterruptedException ex) {
+        }
     }
 
     public void resgate(double resgate){
         this.saldoInvestimento -= resgate;
         this.saldoContaCorrente += resgate;
+
+        System.out.println("Valor de R$" + resgate + " depositado com sucesso!");
+        try {
+            Thread.sleep (2000);
+        } catch (InterruptedException ex) {
+        }
     }
 
     public void investimento(double investimento){
         this.saldoInvestimento += investimento;
         this.saldoContaCorrente -= investimento;
+
+        System.out.println("Valor de R$" + investimento + " depositado com sucesso!");
+        try {
+            Thread.sleep (2000);
+        } catch (InterruptedException ex) {
+        }
     }
 
 }

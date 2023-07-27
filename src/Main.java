@@ -7,6 +7,8 @@ public class Main {
         double valor;
         while (opcao != 5)
         {
+            conta.setSaldoInvestimento(conta.getSaldoInvestimento()*1.05);
+
             System.out.println("");
             System.out.println("|Banco Biederman|");
             System.out.println("Bem vindo " + conta.getNomeCompleto());
@@ -39,6 +41,10 @@ public class Main {
                 }
                 case 5 -> {
                     System.out.println("Saindo...");
+                    try {
+                        Thread.sleep (2000);
+                    } catch (InterruptedException e) {
+                    }
                 }
                 default -> System.out.println("Número inválido");
             }

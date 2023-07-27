@@ -27,7 +27,7 @@ public class Main {
                     conta.saldos();
                 }
                 case 2 -> {
-                    System.out.println("Digite um valor para resgatar(seu saldo atual é:" + String.format("%.2f" , conta.getSaldoContaCorrente()) + ")");
+                    System.out.println("Digite um valor para resgatar(seu saldo atual é:" + String.format("%.2f" , conta.getSaldoInvestimento()) + ")");
                     valor = scanf.nextDouble();
                     conta.resgate(valor);
                 }

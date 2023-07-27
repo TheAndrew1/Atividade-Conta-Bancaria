@@ -1,14 +1,13 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        Conta conta = new Conta("Alex");
         Scanner scanf = new Scanner(System.in);
-        System.out.println("Digite seu nome:");
-        String cliente = scanf.nextLine();
-        Conta conta = new Conta(cliente);
         int opcao = 0;
         double valor;
         while (opcao != 5)
         {
+            conta.setSaldoInvestimento(conta.getSaldoInvestimento()*1.05);
 
             System.out.println("");
             System.out.println("|Banco Biederman|");
@@ -42,6 +41,10 @@ public class Main {
                 }
                 case 5 -> {
                     System.out.println("Saindo...");
+                    try {
+                        Thread.sleep (2000);
+                    } catch (InterruptedException e) {
+                    }
                 }
                 default -> System.out.println("Número inválido");
             }

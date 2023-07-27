@@ -38,8 +38,16 @@ public class Conta {
         this.saldoInvestimento = saldoInvestimento;
     }
 
+    public void saldos(){
+        System.out.println("");
+        System.out.println("Saldo conta corrente: R$" + this.getSaldoContaCorrente());
+        System.out.println("Saldo conta investimento: R$" + this.getSaldoInvestimento());
+        System.out.println("");
+    }
+
     public void deposito(double deposito){
         this.saldoContaCorrente += deposito;
+        System.out.println("Valor R$" + deposito + "depositado com sucesso");
     }
 
     public void resgate(double resgate){

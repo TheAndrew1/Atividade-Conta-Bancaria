@@ -1,12 +1,15 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Conta conta = new Conta("Alex");
         Scanner scanf = new Scanner(System.in);
+        System.out.println("Digite seu nome:");
+        String cliente = scanf.nextLine();
+        Conta conta = new Conta(cliente);
         int opcao = 0;
         double valor;
         while (opcao != 5)
         {
+
             System.out.println("");
             System.out.println("|Banco Biederman|");
             System.out.println("Bem vindo " + conta.getNomeCompleto());
